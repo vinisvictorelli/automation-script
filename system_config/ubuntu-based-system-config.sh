@@ -87,4 +87,9 @@ main() {
     sudo apt install -y harmony.deb
     rm harmony.deb
     echo 'Harmony music installed using apt'
+    # Installing qbittorrent
+    sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable
+    sudo apt-get update
+    sudo apt-get install qbittorrent
+    echo 'QBittorrent installed using apt'
 }
