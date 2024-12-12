@@ -54,6 +54,7 @@ main() {
     echo 'Flatpak installed'
     # Installing dependencies
     sudo apt-get install ffmpeg
+    sudo apt install mpv
     # Installing Obsidian using apt
     wget -qO obsidian.deb "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.7.7/obsidian_1.7.7_amd64.deb"
     sudo apt install -y ./obsidian.deb
@@ -78,7 +79,12 @@ main() {
     echo 'LocalSend installed using flatpak'
     # Installing Anaconda
     wget -q0 anaconda.sh 'https://repo.anaconda.com/archive/Anaconda3-2024.10-1-Linux-x86_64.sh'
-    sudo apt install -y ./anaconda.sh
+    sudo bash ./anaconda.sh
     rm anaconda.sh
     echo 'Anaconda installed using bash script'
+    # Installing harmony music
+    wget -q0 harmony.deb 'https://github.com/anandnet/Harmony-Music/releases/download/v1.10.31/harmonymusicv1.10.31.deb'
+    sudo apt install -y harmony.deb
+    rm harmony.deb
+    echo 'Harmony music installed using apt'
 }
